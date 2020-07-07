@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Web of Literature</title>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+</head>
+<body>
+  <div class="sidenav">
+      <a href="#about">Recommendations</a>
+      <a href="#clients">Opinions</a>
+      <a href="#services">More info</a>
+  </div>
+  <nav class="navigationBar">
+    <ul>
+      <li id="home"><a href="index.html">Home</a></li>
+      <li><a href="#">Details</a></li>
+      <li><a href="#tellUs">Tell Us About</a></li>
+    </ul>
+  </nav>
+  <div class="writers">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque facilis amet possimus provident cupiditate sapiente praesentium ipsam corporis esse repudiandae maiores eveniet aperiam, veritatis, ipsum consequatur optio rem quisquam ratione accusantium exercitationem, quam tenetur! Perspiciatis, numquam, veritatis. Amet quasi delectus sunt, sint facilis vel autem dicta labore dolor doloremque! Similique, iste, rem! Modi, voluptatibus accusamus repellat ratione dicta facilis reprehenderit alias ullam, quidem sapiente nisi expedita consequatur culpa molestiae dolorum quaerat tempore iusto veritatis, aliquid quos provident hic possimus! Ipsum.</p>
+    <div class="imgWriters">
+      <img src="{{url_for('static', filename='bukowski.jpg')}}"  alt="bukowski"/>
+      <img src="{{url_for('static', filename='kafka.jpg')}}" alt="kafka">
+      <img src="{{url_for('static', filename='salinger.jpg')}}" alt="salinger">
+    </div>
+  </div>
+  <div class="writers">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque facilis amet possimus provident cupiditate sapiente praesentium ipsam corporis esse repudiandae maiores eveniet aperiam, veritatis, ipsum consequatur optio rem quisquam ratione accusantium exercitationem, quam tenetur! Perspiciatis, numquam, veritatis. Amet quasi delectus sunt, sint facilis vel autem dicta labore dolor doloremque! Similique, iste, rem! Modi, voluptatibus accusamus repellat ratione dicta facilis reprehenderit alias ullam, quidem sapiente nisi expedita consequatur culpa molestiae dolorum quaerat tempore iusto veritatis, aliquid quos provident hic possimus! Ipsum.</p>
+    <div class="imgWriters">
+      <img src="{{url_for('static', filename='horacioQuiroga.jpg')}}" alt="horacioQuiroga">
+      <img src="{{url_for('static', filename='borges.jpg')}}" alt="borges">
+      <img src="{{url_for('static', filename='Cortazar.jpg')}}" alt="Cortazar">
+    </div>
+  </div>
+  <div class="writers">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque facilis amet possimus provident cupiditate sapiente praesentium ipsam corporis esse repudiandae maiores eveniet aperiam, veritatis, ipsum consequatur optio rem quisquam ratione accusantium exercitationem, quam tenetur! Perspiciatis, numquam, veritatis. Amet quasi delectus sunt, sint facilis vel autem dicta labore dolor doloremque! Similique, iste, rem! Modi, voluptatibus accusamus repellat ratione dicta facilis reprehenderit alias ullam, quidem sapiente nisi expedita consequatur culpa molestiae dolorum quaerat tempore iusto veritatis, aliquid quos provident hic possimus! Ipsum.</p>
+    <div class="imgWriters">
+      <img src="{{url_for('static', filename='walsh.jpg')}}" alt="walsh">
+      <img src="{{url_for('static', filename='murakami.jpg')}}" alt="murakami">
+      <img src="{{url_for('static', filename='stephenKing.jpg')}}" alt="stephenKing">
+    </div>
+  </div>
+  <div class="writers">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque facilis amet possimus provident cupiditate sapiente praesentium ipsam corporis esse repudiandae maiores eveniet aperiam, veritatis, ipsum consequatur optio rem quisquam ratione accusantium exercitationem, quam tenetur! Perspiciatis, numquam, veritatis. Amet quasi delectus sunt, sint facilis vel autem dicta labore dolor doloremque! Similique, iste, rem! Modi, voluptatibus accusamus repellat ratione dicta facilis reprehenderit alias ullam, quidem sapiente nisi expedita consequatur culpa molestiae dolorum quaerat tempore iusto veritatis, aliquid quos provident hic possimus! Ipsum.</p>
+    <div class="imgWriters">
+      <img src="{{url_for('static', filename='garciaMarquez.jpg')}}" alt="garciaMarquez">
+      <img src="{{url_for('static', filename='ocampos.jpeg')}}" alt="ocampos">
+      <img src="{{url_for('static', filename='sacheri.jpg')}}" alt="sacheri">
+    </div>
+  </div>
+  <fieldset class="tellUs" id="tellUs">
+    <form action="{{ url_for('handle_data') }}" method="post">
+      <label for="fname">Who is your favourite writer?</label>
+      <input class="firstAndLastNameInput" type="text" id="favwriter" name="favwriter"><br><br>
+      <input id="submitButton" type="submit" value="Submit"><br>
+    </form>
+    <a href="#home"><button id="goUpButton">Go Up</button></a>
+  </fieldset>
+</body>
+<footer>
+  <a href="https://www.instagram.com/"><img src="{{url_for('static', filename='instagram.jpg')}}" alt="instagram"></a>
+  <a href="https://www.facebook.com/"><img src="{{url_for('static', filename='facebook.jpg')}}" alt="facebook"></a>
+  <a href="https://github.com/joacoague15/"><img src="{{url_for('static', filename='github.jpg')}}" alt="github"></a>
+</footer>
+</html>
